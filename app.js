@@ -16,6 +16,6 @@ app.get('/', function(req, res) {
    res.send('Hello world!!!');
 });
 
-server.listen(server_port, function () {
-  console.log( "Listening on port " + server_port )
+app.listen(server_port, server_ip_address, function () {
+  console.log( "Listening on " + server_ip_address + ", port " + server_port )
 });
