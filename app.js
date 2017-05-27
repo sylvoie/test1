@@ -13,7 +13,9 @@ var server_ip_address = process.env.HELLOWORLD_PORT_8080_TCP_ADDR || '127.0.0.1'
 // ======================================================
 
 app.get('/', function(req, res) {
-   res.send('Hello world!!!');
+   var environnement = process.pid;
+   var plateforme = process.platform;
+   res.send('Hello world sur PID ' + environnement + ' plateforme ' + plateforme);
 });
 
 app.listen(server_port, function () {
